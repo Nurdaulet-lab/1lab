@@ -7,16 +7,16 @@ class MyNumbers:
         return self
     
     def __next__(self):
-        if self.a<=x**2:
+        if self.a<=x:
             y=self.a
-            self.b+=1
-            self.a=self.b
-            self.a*=self.a
+            self.a+=1
             return y
         else:
             raise StopIteration
 myclass=MyNumbers()
 myiter=iter(myclass)
-
+b=list
 for y in myiter:
-    print(y)
+    if y%2==0:
+        print(y,end=",")
+         
